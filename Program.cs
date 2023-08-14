@@ -1,4 +1,5 @@
 ﻿using CMS.br.com.projeto.VIEWS;
+using CMS.project.VIEWS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace CMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(mainForm: new FrmClientes());
+            Application.Run(mainForm: new FrmFornecedores());
         }
     }
 }

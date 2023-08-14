@@ -73,7 +73,7 @@ namespace CMS.br.com.projeto.VIEWS
             ClienteDAO dao = new ClienteDAO();
             dao.alterarCliente(obj);
 
-            tabelaCliente.DataSource = dao.listarClientes();
+            tabelaFuncionarios.DataSource = dao.listarClientes();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace CMS.br.com.projeto.VIEWS
             ClienteDAO dao = new ClienteDAO();
             dao.cadastrarCliente(obj);
 
-            tabelaCliente.DataSource = dao.listarClientes();
+            tabelaFuncionarios.DataSource = dao.listarClientes();
         }
 
         private void tabelaCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -122,29 +122,29 @@ namespace CMS.br.com.projeto.VIEWS
 
         private void FrmClientes_Load(object sender, EventArgs e)
         {
-            tabelaCliente.DefaultCellStyle.ForeColor = Color.Black;
+            tabelaFuncionarios.DefaultCellStyle.ForeColor = Color.Black;
 
             ClienteDAO dao = new ClienteDAO();
 
-            tabelaCliente.DataSource = dao.listarClientes();
+            tabelaFuncionarios.DataSource = dao.listarClientes();
         }
 
         private void tabelaCliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtcodigo.Text = tabelaCliente.CurrentRow.Cells[0].Value.ToString();
-            txtnome.Text = tabelaCliente.CurrentRow.Cells[1].Value.ToString();
-            txtrg.Text = tabelaCliente.CurrentRow.Cells[2].Value.ToString();
-            txtcpf.Text = tabelaCliente.CurrentRow.Cells[3].Value.ToString();
-            txtemail.Text = tabelaCliente.CurrentRow.Cells[4].Value.ToString();
-            txttelefone.Text = tabelaCliente.CurrentRow.Cells[5].Value.ToString();
-            txtcelular.Text = tabelaCliente.CurrentRow.Cells[6].Value.ToString();
-            txtcep.Text = tabelaCliente.CurrentRow.Cells[7].Value.ToString();
-            txtendereco.Text = tabelaCliente.CurrentRow.Cells[8].Value.ToString();
-            txtnumero.Text = tabelaCliente.CurrentRow.Cells[9].Value.ToString();
-            txtcomp.Text = tabelaCliente.CurrentRow.Cells[10].Value.ToString();
-            txtbairro.Text = tabelaCliente.CurrentRow.Cells[11].Value.ToString();
-            txtcidade.Text = tabelaCliente.CurrentRow.Cells[12].Value.ToString();
-            cbuf.Text = tabelaCliente.CurrentRow.Cells[13].Value.ToString();
+            txtcodigo.Text = tabelaFuncionarios.CurrentRow.Cells[0].Value.ToString();
+            txtnome.Text = tabelaFuncionarios.CurrentRow.Cells[1].Value.ToString();
+            txtrg.Text = tabelaFuncionarios.CurrentRow.Cells[2].Value.ToString();
+            txtcpf.Text = tabelaFuncionarios.CurrentRow.Cells[3].Value.ToString();
+            txtemail.Text = tabelaFuncionarios.CurrentRow.Cells[4].Value.ToString();
+            txttelefone.Text = tabelaFuncionarios.CurrentRow.Cells[5].Value.ToString();
+            txtcelular.Text = tabelaFuncionarios.CurrentRow.Cells[6].Value.ToString();
+            txtcep.Text = tabelaFuncionarios.CurrentRow.Cells[7].Value.ToString();
+            txtendereco.Text = tabelaFuncionarios.CurrentRow.Cells[8].Value.ToString();
+            txtnumero.Text = tabelaFuncionarios.CurrentRow.Cells[9].Value.ToString();
+            txtcomp.Text = tabelaFuncionarios.CurrentRow.Cells[10].Value.ToString();
+            txtbairro.Text = tabelaFuncionarios.CurrentRow.Cells[11].Value.ToString();
+            txtcidade.Text = tabelaFuncionarios.CurrentRow.Cells[12].Value.ToString();
+            cbuf.Text = tabelaFuncionarios.CurrentRow.Cells[13].Value.ToString();
 
             tabClientes.SelectedTab = tabPage1;
         }
@@ -158,7 +158,7 @@ namespace CMS.br.com.projeto.VIEWS
             ClienteDAO dao = new ClienteDAO();
             dao.excluirCliente(obj);
 
-            tabelaCliente.DataSource = dao.listarClientes();
+            tabelaFuncionarios.DataSource = dao.listarClientes();
         }
 
         private void txtpesquisa_TextChanged(object sender, EventArgs e)
@@ -172,11 +172,11 @@ namespace CMS.br.com.projeto.VIEWS
 
             ClienteDAO dao = new ClienteDAO();
 
-            tabelaCliente.DataSource = dao.buscarClientePorNome(nome);
+            tabelaFuncionarios.DataSource = dao.buscarClientePorNome(nome);
 
-            if(tabelaCliente.Rows.Count == 0)
+            if(tabelaFuncionarios.Rows.Count == 0)
             {
-                tabelaCliente.DataSource = dao.listarClientes();
+                tabelaFuncionarios.DataSource = dao.listarClientes();
             }
         }
 
@@ -186,7 +186,7 @@ namespace CMS.br.com.projeto.VIEWS
 
             ClienteDAO dao = new ClienteDAO();
 
-            tabelaCliente.DataSource = dao.listarClientesPorNome(nome);
+            tabelaFuncionarios.DataSource = dao.listarClientesPorNome(nome);
 
         }
 
