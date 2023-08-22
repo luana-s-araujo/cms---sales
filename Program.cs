@@ -18,7 +18,7 @@ namespace CMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(mainForm: new FrmFornecedores());
+            Application.Run(mainForm: new FrmLogin());
         }
     }
 }

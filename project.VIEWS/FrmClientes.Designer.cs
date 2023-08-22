@@ -571,9 +571,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabClientes;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnnovo;
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btnalterar;
@@ -611,5 +609,7 @@
         private System.Windows.Forms.TextBox txtpesquisa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.TabControl tabClientes;
+        public System.Windows.Forms.TabPage tabPage2;
     }
 }

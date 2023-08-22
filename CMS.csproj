@@ -131,6 +131,18 @@
     <Compile Include="project.VIEWS\FrmFuncionarios.Designer.cs">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="project.VIEWS\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project.VIEWS\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="project.VIEWS\FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project.VIEWS\FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="project.VIEWS\FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
@@ -141,6 +153,12 @@
     <EmbeddedResource Include="project.VIEWS\FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="project.VIEWS\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="project.VIEWS\FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -149,6 +167,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -164,6 +183,44 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-fundo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dicas-gestao-financeira.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fornecedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aperto-de-mao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crescimento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

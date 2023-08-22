@@ -1,6 +1,7 @@
 ﻿using CMS.br.com.projeto.conexao;
 using CMS.br.com.projeto.MODEL;
 using CMS.project.MODEL;
+using CMS.project.VIEWS;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -221,6 +222,63 @@ namespace CMS.project.DAO
             //{
             //    conexao.Close(); 
             //}
+        }
+
+        public bool EfetuarLogin(string email, string senha)
+        {
+            try
+            {
+                string sql = @"select * from tb_funcionarios where email = @email and senha = @senha";
+                using (MySqlConnection conexao = new MySqlConnection(ConfigurationManager.ConnectionStrings["bdvendas"].ConnectionString))
+
+                {
+                    MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                    executacmd.Parameters.AddWithValue("@email", email);
+                    executacmd.Parameters.AddWithValue("@senha", senha);
+
+                    conexao.Open();
+
+                    using (MySqlDataReader reader = executacmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string nivel = reader.GetString("nivel_acesso");
+                            string nome = reader.GetString("nome");
+
+                            FrmMenu telamenu = new FrmMenu();
+                                
+                            telamenu.txtusuario.Text =  nome;
+
+                            if (nivel.Equals("Administrador"))
+                            {
+                                telamenu.Show();
+                            }
+                            else if (nivel.Equals("Vendedor"))
+                            {
+                                //telamenu.menuProdutos.Visible = false;
+                                telamenu.menuProdutos.Enabled = false;
+                                telamenu.menuHistóricoDeVendas.Enabled = false;
+
+                                telamenu.Show();
+                            }
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("E-mail ou senha incorretas!");
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro: " + erro);
+                return false;
+            }
+
+            return false;
         }
 
 

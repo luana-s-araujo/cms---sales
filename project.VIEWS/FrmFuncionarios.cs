@@ -145,6 +145,7 @@ namespace CMS.project.VIEWS
             FuncionarioDAO dao = new FuncionarioDAO();
             tabelaFuncionario.DataSource = dao.listarFuncionarioPorNome(nome);
 
+
         }
 
         private void btnnovo_Click(object sender, EventArgs e)

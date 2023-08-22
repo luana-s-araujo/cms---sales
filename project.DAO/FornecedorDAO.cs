@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -151,8 +152,6 @@ namespace CMS.project.DAO
             //    conexao.Close(); 
             //}
         }
-
-
         public DataTable listarFornecedorPorNome(string nome)
         {
             try
@@ -213,6 +212,7 @@ namespace CMS.project.DAO
             //    conexao.Close(); 
             //}
         }
+
 
     }
 }
